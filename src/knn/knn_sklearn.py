@@ -44,7 +44,7 @@ y_test = np.array([
 
 lb = LabelBinarizer()
 y_train_binarized = lb.fit_transform(y_train) 
-y_test_binarized = lb.fit_transform(y_test) 
+y_test_binarized = lb.transform(y_test) 
 
 clf = KNeighborsClassifier(n_neighbors=K) 
 clf.fit(x_train, y_train_binarized.reshape(-1))
